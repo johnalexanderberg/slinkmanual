@@ -65,17 +65,19 @@ main {
 }
 
 section {
-
     height: 100vh;
+
     scroll-snap-align: start;
     scroll-snap-stop: always;
+
+}
+section {
     background-color: #ff8383;
     height: 100vh;
     position: sticky;
     position: -webkit-sticky;
     top: 0;
 }
-
 
 section:nth-child(3n +2){
     background-color: #f5e7a3;
