@@ -17,6 +17,8 @@
 body{
     font-family: 'Lato', sans-serif;
     font-size: var(--base-font-size);
+    scroll-snap-type: y mandatory;
+    overflow: scroll;
 }
 
 p, h1, h2, h3, h4, h5, li {
@@ -51,13 +53,24 @@ path {
     fill: none;
 }
 
+
+main {
+    scroll-snap-type: y mandatory;
+    flex-basis: 50%;
+    max-height: 100vh;
+    scroll-snap-stop: always;
+    overflow-y: scroll;
+}
+
 section {
     height: 100vh;
     background-color: #ff8383;
-
-    position: -webkit-sticky;
+    scroll-snap-align: start;
     position: sticky;
-    top: 0px;
+    position: -webkit-sticky;
+    top: 0;
+
+
 }
 
 section:nth-child(3n +2){
@@ -65,5 +78,5 @@ section:nth-child(3n +2){
 }
 
 section:nth-child(3n +3){
-    background-color: #bec7ff;
+    background-color: #ccffbe;
 }
